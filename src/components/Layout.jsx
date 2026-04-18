@@ -17,6 +17,9 @@ export default function Layout() {
               <Nav.Link as={NavLink} to="/events">
                 Events
               </Nav.Link>
+              <Nav.Link as={NavLink} to="/forms">
+                Forms
+              </Nav.Link>
               <Nav.Link as={NavLink} to="/board">
                 Board
               </Nav.Link>

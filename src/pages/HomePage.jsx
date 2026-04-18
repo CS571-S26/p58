@@ -1,6 +1,8 @@
 import '../App.css'
 import Program from '../components/Program'
+import RsvpForm from '../components/RsvpForm'
 import SiteFooter from '../components/SiteFooter'
+import Event from '../components/Event'
 import { Container, Row, Col, Button, Card } from 'react-bootstrap'
 
 export default function HomePage() {
@@ -8,22 +10,28 @@ export default function HomePage() {
     <div>
       <header className="hero bg-light py-5 mb-4">
         <Container>
-          <h1 className="display-5">Girls Who Code At UW-Madison</h1>
-          <p className="lead">
-            Join a supportive community of your female peers in technology. Sign up for our email list below!
-          </p>
-          <div>
-            <Button
-              as="a"
-              href="https://docs.google.com/forms/d/e/1FAIpQLScHdkVhut9_u-xPDwN47lg9f5wrcHeEhpip3D2OJIlYLVceRA/viewform?usp=publish-editor"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-              className="me-2"
-            >
-              Sign up!
-            </Button>
-          </div>
+          <Row className="align-items-center">
+            <Col md={7} className="mb-3">
+              <h1 className="display-5">Girls Who Code At UW-Madison</h1>
+              <p className="lead">
+                Join a supportive community of your peers in technology. Workshops, mentorship, and socials help you learn and grow — all majors and skill levels welcome.
+              </p>
+              <Button href="#forms" variant="primary" className="me-2 hero-cta">Get Involved</Button>
+              <Button href="#events" variant="outline-primary">See Events</Button>
+            </Col>
+            <Col md={5} className="mb-3">
+              <Card className="hero-event shadow-sm">
+                <Card.Body>
+                  <h6 className="text-muted">Upcoming</h6>
+                  <Event
+                    title="Final Meeting of the Semester"
+                    date="Apr 27 • 7:30 PM"
+                    description="Celebrate the end of the semester with us! We'll have snacks, games, and a recap of all the great things we accomplished this semester. Don't miss it!"
+                    />
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </header>
 
@@ -81,7 +89,7 @@ export default function HomePage() {
               <Program
                 title="Craft Nights"
                 description="Chill crafting sessions where members socialize and work on small crafts."
-                details="Materials are provided. Example crafts include friendship bracelets, paintings, and more.Craft nights are a great way to meet new people and unwind after a busy week."
+                details="Materials are provided. Example crafts include friendship bracelets, paintings, and more. Craft nights are a great way to meet new people and unwind after a busy week."
               />
             </Col>
             <Col md={6} className="mb-3">
@@ -109,6 +117,13 @@ export default function HomePage() {
             </Col>
           </Row>
           <h3>... And More!</h3>
+        </Container>
+      </section>
+
+      <section className="section" id="rsvp">
+        <Container>
+          <h2>RSVP / Interest Form</h2>
+          <RsvpForm />
         </Container>
       </section>
 
