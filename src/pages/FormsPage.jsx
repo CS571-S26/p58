@@ -1,5 +1,10 @@
 import React from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import side1 from '../images/gwc_side_image.png'
+import side2 from '../images/gwc_side_2.jpeg'
+import side3 from '../images/gwc_side_3.png'
+import side4 from '../images/gwc_side_4.jpg'
+import side5 from '../images/gwc_side_5.jpg'
 
 // Replace these with your external form URLs
 const SUGGEST_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeAAEk2apc3zl8IvCtQmlEV8ihM7VQH6pMHHyR66QNBNuSljw/viewform'
@@ -71,6 +76,14 @@ export default function FormsPage() {
               </Card>
             </Col>
           </Row>
+          
+          {/* Decorative stacked images for large screens to fill bottom whitespace */}
+          <div className="forms-side d-none d-lg-flex align-items-center justify-content-center mt-4">
+            <img src={side1} alt="" className="forms-side-img" />
+            <img src={side2} alt="" className="forms-side-img" />
+            <img src={side4} alt="" className="forms-side-img" />
+            <img src={side5} alt="" className="forms-side-img" />
+          </div>
         </Container>
       </section>
     </div>

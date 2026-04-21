@@ -7,7 +7,7 @@ export default function Program(props) {
   return (
     <Card className="h-100">
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
+        <Card.Title as="h3">{props.title}</Card.Title>
         <Card.Text>{props.description}</Card.Text>
         <Button
           variant="link"

@@ -3,12 +3,15 @@ import Program from '../components/Program'
 import RsvpForm from '../components/RsvpForm'
 import SiteFooter from '../components/SiteFooter'
 import Event from '../components/Event'
+import gwc_header from '../images/gwc_header.png'
 import { Container, Row, Col, Button, Card } from 'react-bootstrap'
 
 export default function HomePage() {
   return (
     <div>
-      <header className="hero bg-light py-5 mb-4">
+      <img src={gwc_header} alt="Girls Who Code header" className="top-header-img mb-4" />
+
+      <header className="hero bg-light py-4 mb-4">
         <Container>
           <Row className="align-items-center">
             <Col md={7} className="mb-3">

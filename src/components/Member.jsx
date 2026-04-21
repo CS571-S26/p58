@@ -15,7 +15,7 @@ export default function Member({ name, role, major, year, bio, fact, image }) {
         />
       )}
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
+        <Card.Title as="h3">{name}</Card.Title>
         {role && <Card.Subtitle className="mb-2 text-muted">{role}</Card.Subtitle>}
         <Card.Text className="mb-1"><strong>Major:</strong> {major}</Card.Text>
         <Card.Text className="mb-1"><strong>Year:</strong> {year}</Card.Text>

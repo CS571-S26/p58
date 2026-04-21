@@ -73,6 +73,17 @@ main {
 	letter-spacing: -0.3px;
 }
 
+.hero.text-white .display-5,
+.hero.text-white .lead {
+	color: #fff;
+}
+
+.hero.text-white {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+}
+
 .hero-event {
 	border: none;
 	background: var(--surface);
@@ -111,10 +122,12 @@ main {
 	border-top-right-radius: var(--radius);
 }
 
-/* Accessibility: visible focus */
-a:focus, .btn:focus, .form-control:focus {
-	outline: 3px solid rgba(13,110,253,0.12);
+/* Accessibility: visible focus — stronger for header/nav */
+a:focus, .btn:focus, .form-control:focus, .navbar-brand:focus, .nav-link:focus {
+	outline: 3px solid rgba(13,110,253,0.28);
 	outline-offset: 2px;
+	box-shadow: 0 0 0 4px rgba(13,110,253,0.12);
+	border-radius: 6px;
 }
 
 /* Small responsive tweaks */
@@ -135,4 +148,106 @@ a:focus, .btn:focus, .form-control:focus {
 @keyframes fadeIn {
 	from { opacity: 0; transform: translateY(6px); }
 	to { opacity: 1; transform: translateY(0); }
+}
+
+/* Skip link (visible on focus) */
+.skip-link {
+	position: absolute;
+	left: -999px;
+	top: 0;
+	background: #fff;
+	padding: 8px 12px;
+	z-index: 1000;
+}
+.skip-link:focus {
+	left: 16px;
+	top: 12px;
+	border-radius: 6px;
+	box-shadow: 0 6px 20px rgba(16,24,40,0.08);
+}
+
+/* Footer contrast improvements */
+.footer {
+	color: #343a40; /* darker text for better contrast */
+}
+.footer .footer-link {
+	color: var(--brand-600);
+	text-decoration: underline;
+}
+.footer .footer-link:focus,
+.footer .footer-link:hover {
+	color: #0a58ca;
+	text-decoration: none;
+}
+
+/* Gallery images */
+.gallery-img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	object-position: top center;
+	border-top-left-radius: var(--radius);
+	border-top-right-radius: var(--radius);
+}
+
+@media (min-width: 992px) {
+	.gallery-img {
+		height: 400px;
+	}
+}
+
+/* Forms page decorative stacked images */
+.forms-side {
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 1rem;
+}
+.forms-side-img {
+	width: 180px;
+	height: 130px;
+	border-radius: 8px;
+	object-fit: cover;
+	box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+@media (max-width: 991px) {
+	.forms-side { display: none !important; }
+}
+
+/* Top header image */
+.top-header-img {
+	width: 100%;
+	height: auto;
+	max-height: 360px;
+	object-fit: cover;
+	display: block;
+	border-radius: 10px;
+}
+
+/* Header logo (top-right of hero) */
+.header-logo {
+	max-width: 140px;
+	height: auto;
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.header-logo {
+		max-width: 110px;
+	}
+}
+
+/* Navbar logo (site-wide) */
+.nav-logo {
+	max-height: 48px;
+	width: auto;
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.nav-logo {
+		max-height: 36px;
+	}
 }
