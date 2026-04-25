@@ -14,7 +14,7 @@ export default function SiteFooter() {
         <Row>
           <Col md={6}>
             <strong>Girls Who Code Club</strong>
-            <div>Contact: <a href="mailto:girlswhocode.uw@gmail.com" aria-label="Email girls who code">girlswhocode.uw@gmail.com</a></div>
+            <div>Contact: <a href="mailto:girlswhocode.uw@gmail.com" aria-label="Email girls who code" className="footer-link">girlswhocode.uw@gmail.com</a></div>
           </Col>
           <Col md={6} className="text-md-end">
             <nav aria-label="social links">

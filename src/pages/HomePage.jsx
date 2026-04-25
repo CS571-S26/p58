@@ -25,7 +25,7 @@ export default function HomePage() {
             <Col md={5} className="mb-3">
               <Card className="hero-event shadow-sm">
                 <Card.Body>
-                  <h6 className="text-muted">Upcoming</h6>
+                  <p className="text-muted small mb-2">Upcoming</p>
                   <Event
                     title="Final Meeting of the Semester"
                     date="Apr 27 • 7:30 PM"
@@ -122,6 +122,7 @@ export default function HomePage() {
           <h3>... And More!</h3>
         </Container>
       </section>
+      <br/>
 
       <section className="section" id="rsvp">
         <Container>

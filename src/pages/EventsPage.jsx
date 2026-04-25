@@ -26,6 +26,8 @@ export default function EventsPage() {
                 />
               </Col>
             </Row>
+            <br/>
+            <br/>
             <h2>Tentative Events: Fall 2026</h2>
             <Row>
               <Col md={6} className="mb-3">

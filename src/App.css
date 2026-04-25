@@ -168,15 +168,16 @@ a:focus, .btn:focus, .form-control:focus, .navbar-brand:focus, .nav-link:focus {
 
 /* Footer contrast improvements */
 .footer {
-	color: #343a40; /* darker text for better contrast */
+	color: #212529; /* darker text for better contrast */
 }
 .footer .footer-link {
-	color: var(--brand-600);
+	color: #052c65; /* darker navy for higher contrast */
+	font-weight: 600;
 	text-decoration: underline;
 }
 .footer .footer-link:focus,
 .footer .footer-link:hover {
-	color: #0a58ca;
+	color: #021b3f; /* even darker on hover/focus */
 	text-decoration: none;
 }
 

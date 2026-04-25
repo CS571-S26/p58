@@ -24,6 +24,8 @@ export default function Gallery({ images = [] }) {
               role="button"
               onClick={() => open(idx)}
               className="h-100 shadow-sm"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(idx) } }}
             >
               <Card.Img
                 variant="top"
@@ -47,7 +49,11 @@ export default function Gallery({ images = [] }) {
         </Modal.Header>
         <Modal.Body className="text-center">
           {active != null && (
-            <img src={images[active].src} alt={images[active].alt || ''} style={{ maxWidth: '100%', height: 'auto' }} />
+            <img
+              src={images[active].src}
+              alt={images[active].alt || images[active].caption || `Photo ${active + 1}`}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
           )}
         </Modal.Body>
       </Modal>

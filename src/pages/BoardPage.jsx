@@ -1,6 +1,7 @@
 import '../App.css'
 import SiteFooter from '../components/SiteFooter'
 import Member from '../components/Member'
+import BoardPosition from '../components/BoardPosition'
 import trisha from '../images/trisha.png'
 import sidney from '../images/sidney.png'
 import justina from '../images/justina.png'
@@ -57,6 +58,46 @@ export default function BoardPage() {
     }
   ]
 
+  const positions = [
+    {
+      title: 'Treasurer',
+      summary: 'Manage the chapter budget, buy materials and food, and coordinate reimbursements.',
+      responsibilities: [
+        'Keep track of purchase history for the club',
+        'Manage the GWC bank account',
+        'Fill out forms to get funding at the beginning of the semester',
+        'Get materials/supplies for events'
+      ],
+      timeCommitment: '2–4 hours / week',
+      deadline: 'April 30',
+      applyLink: 'https://docs.google.com/forms/d/e/1FAIpQLScT_YtbO2cOihaittzyO2ZloGTizjljeXIz_CMk0FLjKQspVg/viewform?usp=dialog'
+    },
+    {
+      title: 'Social Media Coordinator',
+      summary: 'Manage our social media accounts and promote events to the campus community.',
+      responsibilities: [
+        'Make bi-weekly Instagram posts for events and respond to Instagram DMs',
+        'Manage the Discord and post about events and opportunities',
+        'Reach out to potential speakers'
+      ],
+      timeCommitment: '2-4 hours / week',
+      deadline: 'April 30',
+      applyLink: 'https://docs.google.com/forms/d/e/1FAIpQLScT_YtbO2cOihaittzyO2ZloGTizjljeXIz_CMk0FLjKQspVg/viewform?usp=dialog'
+    },
+    {
+      title: 'Secretary',
+      summary: 'Handle administrative tasks and keep track of meeting notes and attendance.',
+      responsibilities: [
+        'Create and send out the bi-weekly meeting email',
+        'Add new members to the mailing list (after org fair, etc.)',
+        'Respond to emails sent to the UW Girls Who Code email'
+      ],
+      timeCommitment: '2–4 hours / week',
+      deadline: 'April 30',
+      applyLink: 'https://docs.google.com/forms/d/e/1FAIpQLScT_YtbO2cOihaittzyO2ZloGTizjljeXIz_CMk0FLjKQspVg/viewform?usp=dialog'
+    }
+  ]
+
   return (
     <div className="min-vh-100 d-flex flex-column">
       <main className="flex-grow-1">
@@ -71,6 +112,16 @@ export default function BoardPage() {
                 </Col>
               ))}
             </Row>
+              <hr />
+              <h2 className="mt-4">Open Board Positions</h2>
+              <p>We're accepting applications for the following roles for the 2026-2027 school year — click Apply to learn more!</p>
+              <Row>
+                {positions.map((p) => (
+                  <Col md={6} lg={4} className="mb-3" key={p.title}>
+                    <BoardPosition {...p} />
+                  </Col>
+                ))}
+              </Row>
           </Container>
         </section>
       </main>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import SiteFooter from '../components/SiteFooter'
 import side1 from '../images/gwc_side_image.png'
 import side2 from '../images/gwc_side_2.jpeg'
 import side3 from '../images/gwc_side_3.png'
@@ -44,7 +45,7 @@ export default function FormsPage() {
               <Card className="h-100">
                 <Card.Body>
                   <Card.Title>Join the Board</Card.Title>
-                  <Card.Text>Interested in a board role? Fill out the application form.</Card.Text>
+                  <Card.Text>Interested in a board role? Fill out the application form or learn more on the board positions page.</Card.Text>
                   <Button
                     href={JOIN_URL}
                     target="_blank"
@@ -86,6 +87,7 @@ export default function FormsPage() {
           </div>
         </Container>
       </section>
+      <SiteFooter/>
     </div>
   )
 }
